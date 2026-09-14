@@ -2,6 +2,8 @@ let nomJugador
 
 let tablero = document.querySelector("#tablero")
 
+let numero = document.querySelector("#numero")
+
 let tableroAlternativo = document.querySelector("#tableroAlternativo")
 
 const boton = document.querySelector("#boton")
@@ -30,3 +32,7 @@ boton.addEventListener("click", () => {
     tablero.innerHTML = sumar(2, 3);
     tableroAlternativo.innerHTML = multiplicar(2, 3)
 });
+
+numero.addEventListener("change", () => {
+    
+})
