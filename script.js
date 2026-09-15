@@ -2,8 +2,6 @@ let nomJugador;
 
 let tablero = document.querySelector("#tablero");
 
-let numero = document.querySelector("#numero");
-
 let tableroAlternativo = document.querySelector("#tableroAlternativo");
 
 let tablaMultiplicar = document.querySelector("#tablaMultiplicar");
@@ -35,15 +33,24 @@ boton.addEventListener("click", () => {
   tableroAlternativo.innerHTML = multiplicar(2, 3);
 });
 
-numero.addEventListener("change", () => {
+let inputNumero = document.querySelector("#numero");
+console.log(inputNumero);
+inputNumero.addEventListener("change", () => {
+  console.log("Holaaaaaaaaaaaaaaaaaaaaaa");
   tablaMultiplicar.innerHTML = "";
-  if (numero.value <= 0) {
+  if (inputNumero.value <= 0) {
     tablaMultiplicar.innerHTML = "El número debe ser mayor a 0";
-  } else if (numero.value >= 11) {
+  } else if (inputNumero.value >= 11) {
     tablaMultiplicar.innerHTML = "El número debe ser menor o igual a 10";
   } else {
     for (let i = 0; i <= 10; i++) {
-      tablaMultiplicar.innerHTML += "<p>" + numero.value + " x " + i + " = " + numero.value * i + "</p>";
+      tablaMultiplicar.innerHTML += "<p>" + inputNumero.value + " x " + i + " = " + inputNumero.value * i + "</p>";
     }
   }
 });
+
+let estado = ['Inicio', 'turnoA', 'turnoB', 'fin']
+
+switch (estado) {
+  case 'Inicio':
+}
