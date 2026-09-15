@@ -51,6 +51,16 @@ inputNumero.addEventListener("change", () => {
 
 let estado = ['Inicio', 'turnoA', 'turnoB', 'fin']
 
-switch (estado) {
+switch (estado[1]) {
   case 'Inicio':
+    console.log('Estamos en el inicio');
+    break;
+  case 'turnoA':
+    console.log('Estamos en el turno del jugador A')
+    break;
+  case 'turnoB':
+    console.log('Estamos en el turno del jugador B')
+    break
+  case 'fin':
+    console.log('Estamos en el final del juego')
 }
